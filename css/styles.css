@@ -1,3 +1,11 @@
-p {
+h1 {
+    color: red;
+}
+
+.p-home {
     font-size: 200px;
+}
+
+table{
+    background-color: red;
 }
