@@ -17,6 +17,7 @@
 
 ## Desenvolvimento do programa de bolsas ##
 **Resumo**
+
 Até o momento tive uma boa ambientação com os cursos em um contexto geral, completando todos dentro do prazo e sem intercorrências.
 
 O curso de Git/GitHub me trouxe informações relevantes sobre a exposição do meu progresso e possíveis portifólios profissionais.
