@@ -9,7 +9,7 @@
 
 **Semestre atual:** 3º 
 
-**Experiências na área de tecnologia:** Acompanhamento do desensolvimento de códigos para interpretação de dados de Arduino, aplicados a hardwares da área da Performance e Saúde.
+**Experiências na área de tecnologia:** Acompanhamento do desensolvimento de códigos em Arduino e Python, aplicados a hardwares da área da Performance e Saúde.
 
 **Hobbies:** Corrida, Leitura e Natação.
 
@@ -17,6 +17,10 @@
 
 ## Desenvolvimento do programa de bolsas ##
 **Resumo**
-Até o momento tive uma boa ambientação com o Git/GitHub e Metodologias Ágeis, sendo que o primeiro conclui no período determinado e o segundo estou com 40% do progresso.
+Até o momento tive uma boa ambientação com os cursos em um contexto geral, completando todos dentro do prazo e sem intercorrências.
 
-Já no curso de GNU/Linux, não tive tanta facilidade, demorando um pouco mais para consolidar o aprendizado, porém, conclui com exito o curso. 
+O curso de Git/GitHub me trouxe informações relevantes sobre a exposição do meu progresso e possíveis portifólios profissionais.
+
+Já no curso de GNU/Linux, não tive tanta facilidade, demorando um pouco mais para consolidar o aprendizado, porém, conclui com exito o curso.
+
+O curso de SQL e Big Data foi fascinante, pois não havia dito contado com o tratamento de dados e análise dos mesmos. Esses dois cursos me mostraram o poder dos dados, de como manipulalos e como extrair muito valor deles. Cursos sensacionais, me fez criar uma grande afinidade pela área.
