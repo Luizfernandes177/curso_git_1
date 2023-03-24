@@ -39,6 +39,8 @@ with open('etapa-2.txt', 'w') as arquivo_dois:
   arquivo_dois.write(f"{colunas[n]['Actor']} = {colunas[n]['Average per Movie']}")
 
 arquivo_dois.close()
+
+
 #exercicio 3
 
 med_fat_f = []
@@ -54,6 +56,8 @@ with open('etapa-3.txt', 'w') as arquivo_tres:
   arquivo_tres.write(f"{colunas[d]['Actor']} = {c}")
 
 arquivo_tres.close()
+
+
 #exercicio 4
 
 
@@ -73,6 +77,8 @@ with open('etapa-4.txt', 'w') as arquivo_quatro:
   arquivo_quatro.write(f"{colunas[posicao]['#1 Movie']} = {top} vezes")
 
 arquivo_quatro.close()
+
+
 #exercicio 5
 
 ordem = []

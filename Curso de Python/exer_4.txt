@@ -1,0 +1,30 @@
+with open('actors.csv') as arquivo:  #abrir arquivo
+  dados = arquivo.read()             #ler arquivo
+  dados = dados.split('\n')[1:]      #separação do arquivo em lista por quebra de linha
+  dados_tratados = []
+  for n in dados:                    #loop de acesso a cada string da lista
+    nova_string = n.replace('"Robert Downey, Jr."', 'Robert Downey Jr ') #ajuste de exceção
+    nova_string = nova_string.split(',') #separação de string nova em lista por vírgula
+    dados_tratados.append(nova_string)  #inclusão das novas listas em uma lista única
+
+colunas = []
+for n in dados_tratados:
+  colunas.append(dict([('Actor', n[0]), ('Total Gross', n[1]), ('Number of Movies', n[2]), ('Average per Movie', n[3]), ('#1 Movie', n[4]), ('Gross', n[5])]))
+
+
+mais_fr = []
+
+for n in range(len(colunas)):
+  mais_fr.append(colunas[n]['#1 Movie'])
+  wordfreq = []
+  for w in mais_fr:
+    wordfreq.append(mais_fr.count(w))
+
+top = max(wordfreq)
+posicao = wordfreq.index(top)
+resp_quatro = print(f"{colunas[posicao]['#1 Movie']} = {top} vezes")
+
+with open('etapa-4.txt', 'w') as arquivo_quatro:
+  arquivo_quatro.write(f"{colunas[posicao]['#1 Movie']} = {top} vezes")
+
+arquivo_quatro.close()
