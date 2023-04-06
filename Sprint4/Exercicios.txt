@@ -1,0 +1,88 @@
+---- Exercicio 1
+
+
+Você está recebendo um arquivo contendo 10.000 números inteiros, um em cada linha. 
+Utilizando lambdas e high order functions, apresente os 5 maiores valores pares e a soma destes.
+
+
+
+
+with open('number.txt') as numeros:
+    dados = numeros.read()
+    dados = dados.split('\n')
+pares = list(sorted(filter(lambda x:x if x%2==0 else None, list(map(int, dados))), reverse=True))
+top_five = pares[:5]
+print(top_five)
+print(sum(top_five))
+
+
+---- Exercicio 2
+
+
+
+Utilizando high order functions, implemente o corpo da função conta_vogais. 
+O parâmetro de entrada será uma string e o resultado deverá ser a contagem de vogais presentes em seu conteúdo.
+
+
+def conta_vogais(texto:str)-> int:
+    lista = list(texto.lower())
+    def cont_vogais():
+        return list(filter(lambda x: x if x in ['a','e', 'i','o','u'] else None, lista))
+    return len(cont_vogais())
+
+
+
+---- Exercicio 3
+
+
+A função calcula_saldo recebe uma lista de tuplas, correspondendo a um conjunto de lançamentos bancários. 
+Cada lançamento é composto pelo seu valor (sempre positivo) e pelo seu tipo (C - crédito ou D - débito). 
+
+
+
+from functools import reduce
+def calcula_saldo(lancamentos) -> float:
+    saldofinal = reduce(lambda x,y: x+y, list(map(lambda x:x[0] if x[1] == 'C' else -x[0], lancamentos)))
+    return saldofinal
+
+
+
+
+---- Exercicio 4
+
+A função calcular_valor_maximo deve receber dois parâmetros, chamados de operadores e operandos. 
+Em operadores, espera-se uma lista de caracteres que representam as operações matemáticas suportadas (+, -, /, *, %), 
+as quais devem ser aplicadas à lista de operadores nas respectivas posições. 
+Após aplicar cada operação ao respectivo par de operandos, a função deverá retornar o maior valor dentre eles.
+
+
+def calcular_valor_maximo(operadores,operandos) -> float:
+    return max(list(map(lambda x:x[1][0]+x[1][1] if x[0]=="+" else (x[1][0]-x[1][1] if x[0]=="-" else (x[1][0]*x[1][1] if x[0]=="*" else (x[1][0]/x[1][1] if x[0]=="/" else x[1][0]%x[1][1]))), list(zip(operadores, operandos)))))
+
+
+
+---- Exercicio 5
+
+
+Um determinado sistema escolar exporta a grade de notas dos estudantes em formato CSV. 
+Cada linha do arquivo corresponde ao nome do estudante, acompanhado de 5 notas de avaliação, no intervalo [0-10]. 
+É o arquivo estudantes.csv de seu exercício.
+
+
+def listasNotas(lst, n):
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+    return lst
+
+def notaporAluno(listageral, nti):
+    ordem = list(sorted(listageral))
+    for x,y in zip(ordem,nti):
+        print(f'Nome: {x[0]} Notas: {[y[0], y[1], y[2]]} Média: {round((y[0] + y[1] + y[2]) / 3, 2)}')
+
+with open('estudantes.csv') as lista:
+    dados = lista.read()
+    dados = list(sorted(map(lambda x:x.split(','), dados.split('\n'))))
+    nums = list(map(lambda x:x[1:], dados))
+    valores = [int(y) for val in nums for y in val]
+    notas = list(map(lambda x: sorted(x, reverse=True), listasNotas(valores, 5)))
+    notaporAluno(dados,notas)
