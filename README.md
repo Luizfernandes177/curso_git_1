@@ -13,7 +13,7 @@
 
 **Hobbies:** Corrida, Leitura e Natação.
 
-**Outras informações:** Tenho formação em Bacharel de Educação Física e estou concluindo o mestrado em Ciência do Esporte, ambos pela UFMG. Vim para a programação por uma necessidade do meu mestrado e me identifiquei muito. 
+**Outras informações:** Tenho formação em Bacharel de Educação Física e estou concluindo o mestrado em Ciência do Esporte, ambos pela UFMG. Vim para a programação por uma necessidade do meu mestrado e me identifiquei muito, passando agora por um momento de transição profissional. 
 
 ## Desenvolvimento do programa de bolsas ##
 **Resumo**
@@ -25,3 +25,7 @@ O curso de Git/GitHub me trouxe informações relevantes sobre a exposição do 
 Já no curso de GNU/Linux, não tive tanta facilidade, demorando um pouco mais para consolidar o aprendizado, porém, conclui com exito o curso.
 
 O curso de SQL e Big Data foi fascinante, pois não havia dito contado com o tratamento de dados e análise dos mesmos. Esses dois cursos me mostraram o poder dos dados, de como manipulalos e como extrair muito valor deles. Cursos sensacionais, me fez criar uma grande afinidade pela área.
+
+Nós cursos relacionados a Pyhton, tive mais facilidade, apesar do conteúdo ser extenso e denso.
+
+Em relação aos cursos de Docker e Estatística, abordaram conteúdos bem práticos. Mostrando de forma clara a aplicação no mercado de algumas ferramentas.
