@@ -1,0 +1,19 @@
+-- Crie uma consulta que lista os 3 nomes mais usados em cada década desde o 1950 até hoje. -
+
+SELECT nome, SUM (total) as soma
+FROM nomes
+where ano >= 1950
+GROUP BY nome
+order by soma desc limit 3;
+
+#	nome	soma
+1	Michael	3854377
+2	David	2840947
+3	James	2817903
+
+
+
+-- Agora execute novamente o código criado com o Test definido anteriormente. Deve ser retornado algo assim no Response:--
+
+
+Arquivo em Jpg salvo a parte
