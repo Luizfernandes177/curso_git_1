@@ -1,0 +1,61 @@
+Sprint 7
+
+--TAREFA 1--
+
+
+
+1.Identifique o ator/atriz com maior número de filmes e o respectivo número de filmes.
+
+
+actors = pd.read_csv("/home/wesley/Documents/aws7/actors.csv")
+actorsordenado = actors.sort_values(by="Number of Movies", ascending=False).head(1)
+actorsordenado.drop(["Total Gross","Average per Movie","#1 Movie","Gross"], axis=1, inplace=True)
+print(actorsordenado)
+
+
+Actor		 Number of Movies
+Robert DeNiro   	       79
+
+
+
+
+
+2.Apresente a média da coluna contendo o número de filmes.
+
+actors = pd.read_csv("/home/wesley/Documents/aws7/actors.csv")
+media = actors["Number of Movies"].mean()
+print(media)
+
+
+37.88
+
+
+
+
+3.Apresente o nome do ator/atriz com a maior média por filme.
+
+
+actors = pd.read_csv("/home/wesley/Documents/aws7/actors.csv")
+actorsordenado2 = actors.sort_values(by="Average per Movie", ascending=False).head(1)
+actorsordenado2.drop(["Total Gross","Number of Movies","#1 Movie","Gross"], axis=1, inplace=True)
+print(actorsordenado2)
+
+
+Actor		      Average per Movie
+Anthony Daniels  	          451,8
+
+
+
+
+4.Apresente o nome do(s) filme(s) mais frequente(s) e sua respectiva frequência.
+
+
+actors = pd.read_csv("/home/wesley/Documents/aws7/actors.csv")
+topfilmes = actors.groupby(["#1 Movie"]).count().sort_values(by="Actor",ascending=False).head(1)
+topfilmes.drop(["Total Gross","Number of Movies","Average per Movie","Gross"], axis=1, inplace=True)
+topfilmes.columns = ["QTD"]
+print(topfilmes)
+
+
+#1 Movie	QTD
+The Avangers     6
