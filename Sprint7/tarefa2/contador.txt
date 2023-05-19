@@ -1,0 +1,7 @@
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+README1 = spark.read.text("README.md").selectExpr("explode(split(value, ' ')) as palavra").where("palavra != ''").groupBy("palavra").count()
+contador = README1.agg(sum("count)).head()[0]
+README1 = README1.withColumn("total", lit(contador))
+README1.show(README1.count(), truncate=False)
+print("Total de palavras: ", contador)
