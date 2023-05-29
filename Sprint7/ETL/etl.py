@@ -5,8 +5,8 @@ import os
 
 client = boto3.client(
     service_name='s3',
-    aws_access_key_id='AKIAXT3LP36KMMHXOYAX',
-    aws_secret_access_key='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',
+    aws_access_key_id='AKIAXT3LP36KG4XSOCNE',
+    aws_secret_access_key='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',
     region_name='us-east-1' 
 )
 
