@@ -1,0 +1,402 @@
+[
+    {
+        "Diretor": "Kenichi Sonoda",
+        "ID filme": 553614
+    },
+    {
+        "Diretor": "Yuu Aoki",
+        "ID filme": 553614
+    },
+    {
+        "Diretor": "Alberto Genovese",
+        "ID filme": 688616
+    },
+    {
+        "Diretor": "Martin de Coudenhove",
+        "ID filme": 373020
+    },
+    {
+        "Diretor": "Nikki Mull",
+        "ID filme": 621455
+    },
+    {
+        "Diretor": "Riki Ohkanda",
+        "ID filme": 1021630
+    },
+    {
+        "Diretor": "Manny Hernandez",
+        "ID filme": 762137
+    },
+    {
+        "Diretor": "Avid Liongoren",
+        "ID filme": 406492
+    },
+    {
+        "Diretor": "Kate Vaillant",
+        "ID filme": 1053808
+    },
+    {
+        "Diretor": "Jos\u00e9 Marcio Nicolosi",
+        "ID filme": 294601
+    },
+    {
+        "Diretor": "Jan \u0160vankmajer",
+        "ID filme": 390066
+    },
+    {
+        "Diretor": "Kate Jessop",
+        "ID filme": 733353
+    },
+    {
+        "Diretor": "Loren Baskin Almazan",
+        "ID filme": 893910
+    },
+    {
+        "Diretor": "Laura Koval",
+        "ID filme": 893910
+    },
+    {
+        "Diretor": "Tony Tang",
+        "ID filme": 280890
+    },
+    {
+        "Diretor": "Mychal Simka",
+        "ID filme": 280890
+    },
+    {
+        "Diretor": "Liu Huai",
+        "ID filme": 730483
+    },
+    {
+        "Diretor": "Holger Tappe",
+        "ID filme": 674935
+    },
+    {
+        "Diretor": "Enzo D'Al\u00f2",
+        "ID filme": 487382
+    },
+    {
+        "Diretor": "Kazuto Nakazawa",
+        "ID filme": 444483
+    },
+    {
+        "Diretor": "Evan DeRushie",
+        "ID filme": 479385
+    },
+    {
+        "Diretor": "Erik Schmitt",
+        "ID filme": 223709
+    },
+    {
+        "Diretor": "Dan Dalton",
+        "ID filme": 363536
+    },
+    {
+        "Diretor": "Kenji Itoso",
+        "ID filme": 791235
+    },
+    {
+        "Diretor": "Chris Shepherd",
+        "ID filme": 554377
+    },
+    {
+        "Diretor": "Li Shujie",
+        "ID filme": 323182
+    },
+    {
+        "Diretor": "Lu Hengyu",
+        "ID filme": 323182
+    },
+    {
+        "Diretor": "Gary Trousdale",
+        "ID filme": 258076
+    },
+    {
+        "Diretor": "Nick Grant",
+        "ID filme": 417815
+    },
+    {
+        "Diretor": "Kyra Buschor",
+        "ID filme": 516261
+    },
+    {
+        "Diretor": "Constantin Paeplow",
+        "ID filme": 516261
+    },
+    {
+        "Diretor": "Kenneth Kuan",
+        "ID filme": 516261
+    },
+    {
+        "Diretor": "Aliki Theofilopoulos",
+        "ID filme": 257784
+    },
+    {
+        "Diretor": "Yagoo",
+        "ID filme": 951178
+    },
+    {
+        "Diretor": "Esa\u00fa Dharma",
+        "ID filme": 897183
+    },
+    {
+        "Diretor": "David Gal\u00e1n Galindo",
+        "ID filme": 897183
+    },
+    {
+        "Diretor": "Pablo Vara",
+        "ID filme": 897183
+    },
+    {
+        "Diretor": "Olan Rogers",
+        "ID filme": 510669
+    },
+    {
+        "Diretor": "Hugo De Faucompret",
+        "ID filme": 716020
+    },
+    {
+        "Diretor": "Elsa Garagarza",
+        "ID filme": 1081412
+    },
+    {
+        "Diretor": "Anders Morgenthaler",
+        "ID filme": 1030214
+    },
+    {
+        "Diretor": "Michael Wulff",
+        "ID filme": 1030214
+    },
+    {
+        "Diretor": "Jos\u00e9 Marcio Nicolosi",
+        "ID filme": 423118
+    },
+    {
+        "Diretor": "Sofia Astrom",
+        "ID filme": 900776
+    },
+    {
+        "Diretor": "Joy Buran",
+        "ID filme": 570225
+    },
+    {
+        "Diretor": "Noelle Melody",
+        "ID filme": 570225
+    },
+    {
+        "Diretor": "Hiroaki Sakurai",
+        "ID filme": 372762
+    },
+    {
+        "Diretor": "Makoto Moriwaki",
+        "ID filme": 372762
+    },
+    {
+        "Diretor": "Terry Moews",
+        "ID filme": 621454
+    },
+    {
+        "Diretor": "Steve Daye",
+        "ID filme": 657880
+    },
+    {
+        "Diretor": "J\u00f8rgen Lerdam",
+        "ID filme": 207323
+    },
+    {
+        "Diretor": "Alex Williams",
+        "ID filme": 746606
+    },
+    {
+        "Diretor": "Steve Baker",
+        "ID filme": 240664
+    },
+    {
+        "Diretor": "Dominic Polcino",
+        "ID filme": 544778
+    },
+    {
+        "Diretor": "Sara Hirner",
+        "ID filme": 710016
+    },
+    {
+        "Diretor": "Rosemary Vasquez-Brown",
+        "ID filme": 710016
+    },
+    {
+        "Diretor": "Chris J. Murray",
+        "ID filme": 599937
+    },
+    {
+        "Diretor": "Blake Benham",
+        "ID filme": 599937
+    },
+    {
+        "Diretor": "Sarah Van Den Boom",
+        "ID filme": 537670
+    },
+    {
+        "Diretor": "Bill Plympton",
+        "ID filme": 530438
+    },
+    {
+        "Diretor": "Jim Hodgson",
+        "ID filme": 1128598
+    },
+    {
+        "Diretor": "Jonni Phillips",
+        "ID filme": 1005252
+    },
+    {
+        "Diretor": "Sung Jin Ahn",
+        "ID filme": 865467
+    },
+    {
+        "Diretor": "Jakub Kroner",
+        "ID filme": 426574
+    },
+    {
+        "Diretor": "Thomas Pecout",
+        "ID filme": 910904
+    },
+    {
+        "Diretor": "Evan Charvet-Quemin",
+        "ID filme": 910904
+    },
+    {
+        "Diretor": "Corentin Dupessey Brun",
+        "ID filme": 910904
+    },
+    {
+        "Diretor": "Edouard Rosaz",
+        "ID filme": 910904
+    },
+    {
+        "Diretor": "Quentin Lassauzay",
+        "ID filme": 910904
+    },
+    {
+        "Diretor": "Darina Shmidt",
+        "ID filme": 783416
+    },
+    {
+        "Diretor": "Sayood",
+        "ID filme": 835049
+    },
+    {
+        "Diretor": "Parako Shinohara",
+        "ID filme": 1076616
+    },
+    {
+        "Diretor": "David Nessl",
+        "ID filme": 782674
+    },
+    {
+        "Diretor": "Robert Niosi",
+        "ID filme": 768761
+    },
+    {
+        "Diretor": "Keith Blomberg",
+        "ID filme": 366292
+    },
+    {
+        "Diretor": "Capucine Gougelet",
+        "ID filme": 1030745
+    },
+    {
+        "Diretor": "Nikki Chapman",
+        "ID filme": 731818
+    },
+    {
+        "Diretor": "Evan Jacobs",
+        "ID filme": 720046
+    },
+    {
+        "Diretor": "Noah Cutwright",
+        "ID filme": 741161
+    },
+    {
+        "Diretor": "Scott Day",
+        "ID filme": 624663
+    },
+    {
+        "Diretor": "Ella Krober",
+        "ID filme": 624663
+    },
+    {
+        "Diretor": "Joseph Pelling",
+        "ID filme": 1032403
+    },
+    {
+        "Diretor": "Becky Sloan",
+        "ID filme": 1032403
+    },
+    {
+        "Diretor": "Mehdi Ghale",
+        "ID filme": 830209
+    },
+    {
+        "Diretor": "Ping Wong",
+        "ID filme": 589912
+    },
+    {
+        "Diretor": "Brian Tse",
+        "ID filme": 422531
+    },
+    {
+        "Diretor": "Robert Trott",
+        "ID filme": 703521
+    },
+    {
+        "Diretor": "Yoko Asano",
+        "ID filme": 522654
+    },
+    {
+        "Diretor": "Alfonso Fulgencio",
+        "ID filme": 1029815
+    },
+    {
+        "Diretor": "Jos\u00e9 Luis Farias",
+        "ID filme": 1029815
+    },
+    {
+        "Diretor": "Aaron Hawkins",
+        "ID filme": 767083
+    },
+    {
+        "Diretor": "Akihito Aoki",
+        "ID filme": 479793
+    },
+    {
+        "Diretor": "Bergen",
+        "ID filme": 479793
+    },
+    {
+        "Diretor": "Joel Erkkinen",
+        "ID filme": 468047
+    },
+    {
+        "Diretor": "Pete Levin",
+        "ID filme": 447858
+    },
+    {
+        "Diretor": "Sidu",
+        "ID filme": 412384
+    },
+    {
+        "Diretor": "Stefan Fjeldmark",
+        "ID filme": 346853
+    },
+    {
+        "Diretor": "Thorbj\u00f8rn Christoffersen",
+        "ID filme": 346853
+    },
+    {
+        "Diretor": "Randolph Kret",
+        "ID filme": 346853
+    },
+    {
+        "Diretor": "Angus MacLane",
+        "ID filme": 213121
+    }
+]
