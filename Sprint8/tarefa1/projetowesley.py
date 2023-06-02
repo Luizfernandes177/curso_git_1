@@ -1,9 +1,6 @@
 import requests
 import pandas as pd
 from IPython.display import display
-import json
-import boto3
-import logging
 from botocore.exceptions import ClientError
 
 
