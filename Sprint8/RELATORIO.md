@@ -2,7 +2,7 @@
 
 ## WESLEY LUIZ FERNANDES ##
 
-## Obejtivo do projeto ##
+## Objetivo do projeto ##
 
 Tema:
 
