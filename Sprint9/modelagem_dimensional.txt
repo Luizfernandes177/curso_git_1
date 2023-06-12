@@ -1,0 +1,64 @@
+-------  EXERCICIO 2 --------
+
+
+MODELAGEM DIMENSIONAL
+
+CREATE VIEW dim_vendedor 
+AS 
+SELECT
+	vend.idVendedor,
+	vend.sexoVendedor,
+	vend.estadoVendedor,
+        idven.nomeVendedor,            
+        cli.idCliente,
+	cli.cidadeCliente,
+        cli.estadoCliente,
+        cli.paisCliente,             
+        idcli.nomeCliente
+FROM tb_vendedor as vend
+join tb_cliente as cli on vend.idCliente = cli.idCliente
+join tb_idvendedor as idven on idven.idVendedor = vend.idVendedor
+join tb_idcliente as idcli on cli.idCliente = idcli.idCliente;
+
+
+
+CREATE VIEW dim_carro
+AS 
+SELECT
+             idCarro,
+             kmCarro,
+             chassiCarro,
+             marcaCarro,
+             modeloCarro,
+             anoCarro,
+             comb.idCombustivel,
+             comb.tipoCombustivel,  
+	     cli.idCliente,
+	     cli.cidadeCliente,
+             cli.estadoCliente,
+             cli.paisCliente,             
+             idcli.nomeCliente
+FROM tb_carro as car
+join tb_combustivel as comb on comb.idCombustivel = car.idCombustivel
+join tb_cliente as cli on cli.idCliente = car.idCliente
+join tb_idcliente as idcli on cli.idCliente = idcli.idCliente;
+
+CREATE VIEW dim_data
+AS
+SELECT
+             dataLocacao,
+             horaLocacao,
+             dataEntrega,
+             horaEntrega
+FROM tb_aluguel
+
+CREATE VIEW fato_aluguel
+AS
+SELECT
+             idLocacao,
+             idVendedor,
+             idCarro,
+             dataLocacao,
+             qtdDiaria,
+             vlrDiaria
+FROM tb_aluguel

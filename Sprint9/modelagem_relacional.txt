@@ -1,0 +1,177 @@
+Atividade 1 - Exercicio 1
+
+-----------   Query  -----------
+
+ALTER TABLE tb_locacao RENAME COLUMN classiCarro TO chassiCarro;
+
+
+CREATE TABLE tb_cliente (
+    idCliente     INTEGER PRIMARY KEY ON CONFLICT IGNORE,
+    cidadeCliente TEXT,
+    estadoCliente TEXT,
+    paisCliente   TEXT
+);
+
+INSERT INTO tb_cliente (
+                           idCliente,
+                           cidadeCliente,
+                           estadoCliente,
+                           paisCliente
+                       )
+                       SELECT idCliente,
+                              cidadeCliente,
+                              estadoCliente,
+                              paisCliente
+                         FROM tb_locacao;
+
+
+
+CREATE TABLE tb_idcliente (
+    idCliente     INTEGER PRIMARY KEY ON CONFLICT IGNORE,
+    nomeCliente TEXT
+);
+
+INSERT INTO tb_idcliente (
+                           idCliente,
+                           nomeCliente
+                       )
+                       SELECT idCliente,
+                              nomeCliente
+                         FROM tb_locacao;
+
+
+
+CREATE TABLE tb_carro (    
+    idCarro     INTEGER PRIMARY KEY ON CONFLICT IGNORE,
+    kmCarro INTEGER,
+    chassiCarro TEXT,
+    marcaCarro   TEXT,
+    modeloCarro TEXT,
+    anoCarro INTEGER,
+    idCombustivel INTEGER,
+    idCliente INTEGER REFERENCES tb_cliente (idCliente) 
+);
+
+INSERT INTO tb_carro (
+			    
+                            idCarro,
+   			    kmCarro,
+    			    chassiCarro,
+    			    marcaCarro,
+   			    modeloCarro,
+    			    anoCarro,
+   			    idCombustivel,
+			    idCliente
+                       )
+                       SELECT 
+			      idCarro,
+   			      kmCarro,
+    			      chassiCarro,
+    			      marcaCarro,
+   			      modeloCarro,
+    			      anoCarro,
+   			      idCombustivel,
+			      idCliente
+                         FROM tb_locacao;
+
+
+
+
+
+CREATE TABLE tb_combustivel (
+    idCombustivel     INTEGER PRIMARY KEY ON CONFLICT IGNORE,
+    tipoCombustivel TEXT
+);
+
+INSERT INTO tb_combustivel (
+                           idCombustivel,
+                           tipoCombustivel
+                       )
+                       SELECT idCombustivel,
+                              tipoCombustivel
+                         FROM tb_locacao;
+
+
+
+
+CREATE TABLE tb_vendedor (
+    idVendedor     INTEGER PRIMARY KEY ON CONFLICT IGNORE,
+    sexoVendedor TEXT,
+    estadoVendedor TEXT,
+    idCliente INTEGER REFERENCES tb_cliente (idCliente) 
+);
+
+INSERT INTO tb_vendedor (
+                           idVendedor,
+                           sexoVendedor,
+			   estadoVendedor,
+			   idCliente
+                       )
+                       SELECT idVendedor,
+                              sexoVendedor,
+			      estadoVendedor,
+			      idCliente
+                         FROM tb_locacao;
+
+
+CREATE TABLE tb_idvendedor (
+    idVendedor     INTEGER PRIMARY KEY ON CONFLICT IGNORE,
+    nomeVendedor TEXT    
+);
+
+INSERT INTO tb_idvendedor (
+                           idVendedor,
+                           nomeVendedor
+			   
+                       )
+                       SELECT idVendedor,
+                              nomeVendedor
+                         FROM tb_locacao;
+
+
+
+
+CREATE TABLE tb_aluguel (
+    idLocacao     INTEGER PRIMARY KEY ON CONFLICT IGNORE,    
+    idVendedor INTERGER REFERENCES tb_vendedor (idVendedor),
+    idCarro INTEGER REFERENCES tb_carro (idCarro),
+    dataLocacao DATETIME,
+    horaLocacao TIME,
+    qtdDiaria INTEGER,    
+    vlrDiaria DECIMAL (18,2),
+    dataEntrega DATETIME,
+    horaEntrega TIME
+);
+
+INSERT INTO tb_aluguel (
+                           idLocacao ,    			   
+    			   idVendedor ,
+   			   idCarro ,
+   			   dataLocacao ,
+    			   horaLocacao ,
+   			   qtdDiaria ,    
+   		     	   vlrDiaria ,
+   			   dataEntrega,
+   			   horaEntrega
+			   
+                       )
+                       SELECT  idLocacao ,    			       
+    			       idVendedor ,
+   			       idCarro ,
+   			       dataLocacao ,
+    			       horaLocacao ,
+   			       qtdDiaria ,    
+   		     	       vlrDiaria ,
+   			       dataEntrega,
+   			       horaEntrega
+                         FROM tb_locacao;
+
+DROP TABLE tb_locacao;
+
+------------     Explicação  -----------
+
+
+
+- Primeiramente foi feito a divisão das tabelas por entidade (Cliente, Carro, Vendedor e Aluguel)
+- Depois foi verificado as colunas chaves (Chaves primárias e Estrangeiras) de cada entidade para criar a relação entre elas.
+- Por fim, foi feito a normalização das colunas, colocando colunas com dados repetidos em novas tabelas, fazendo-se necessário então a criação de duas novas tabelas. 
