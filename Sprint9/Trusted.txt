@@ -1,0 +1,113 @@
+------ PARTE 1 -------
+
+
+
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+
+
+args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+
+
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+
+input_path = 's3://data-lake-de-wesley/Raw/Local/CSV/Movies/2022/movies.csv'
+output_path = 's3://data-lake-de-wesley/Trusted/Local/Parquet/Movies/2022'
+
+df = spark.read.option('header', 'true').csv(input_path)
+
+df = df.coalesce(1)
+df.write.mode('overwrite').parquet(output_path)
+
+
+input_path = 's3://data-lake-de-wesley/Raw/Local/CSV/Series/2022/series.csv'
+output_path = 's3://data-lake-de-wesley/Trusted/Local/Parquet/Series/2022'
+
+
+df = spark.read.option('header', 'true').csv(input_path)
+
+df = df.coalesce(1)
+df.write.mode('overwrite').parquet(output_path)
+
+
+job.commit()
+
+
+
+
+------- PARTE 2 ------
+
+
+
+
+
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+
+args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+
+jsons = [
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/0.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/1.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/2.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/3.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/4.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/5.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/6.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/7.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/8.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/9.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/10.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/11.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/12.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/13.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/14.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/15.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/16.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/17.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/18.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/19.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/20.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/21.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/22.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/23.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/24.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/25.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/26.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/27.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/28.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/29.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/30.json',
+    's3://data-lake-de-wesley/RAW/TMDB/JSON/2023/05/30/31.json'
+]
+
+output_path = 's3://data-lake-de-wesley/Trusted/JSON/2023/05/30/TMDB.parquet'
+
+
+# input_path = jsons
+output_path = 's3://data-lake-de-wesley/Trusted/JSON/2023/05/30/'
+
+df = spark.read.option('header', 'true').json(jsons)
+df = df.withColumnRenamed("ID filme", "idfilmes")
+
+df = df.repartition(1)
+
+df.write.mode('append').parquet(output_path)
