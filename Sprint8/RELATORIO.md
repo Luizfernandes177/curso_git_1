@@ -10,22 +10,21 @@ Somente pesquisa sobre filmes de animação.
 
 Objetivo:
 
-Veirificar se as maiores notas são por filmes com diretores com maior quantidade de produção cinematografica, maior orçamento ou duração dos filmes.
+Veirificar se as maiores notas são por filmes com diretores com maior quantidade de produção cinematografica ou duração dos filmes.
 
 Método:
 
 Agrupar diretor, fazer a contagem de produções e a média da nota de todas as produções. 
-Agrupar por faixa de notas e verificar o orçamento médio em cada faixa.
 Agrupar por faixa de notas e verificar a duração média em cada faixa.
 
 
 Discussão:
 
-Analisar se existe alguma correlação entre as faixas de notas dos filmes, a duração e o orçamento. Além de analisar se os diretores que mais produzem são os que tem as melhores notas.
+Analisar se existe alguma correlação entre as faixas de notas dos filmes e a duração. Além de analisar se os diretores que mais produzem são os que tem as melhores notas.
 
 Intuito:
 
-Avaliar se é valido muito investimento ou não nas produções, o tempo ideal para o maior sucesso e se contratar diretores experientes é sempre válido.
+Avaliar se é valido muito investimento ou não nos diretores, o tempo ideal para o maior sucesso e se contratar diretores experientes é sempre válido.
 
 
 **Tarefa 1** 
