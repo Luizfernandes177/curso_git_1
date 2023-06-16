@@ -19,20 +19,22 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-input_path = 's3://data-lake-de-wesley/Raw/Local/CSV/Movies/2022/movies.csv'
-output_path = 's3://data-lake-de-wesley/Trusted/Local/Parquet/Movies/2022'
 
-df = spark.read.option('header', 'true').csv(input_path)
+input_path = 's3://data-lake-de-wesley/RAW/Local/CSV/Movies/2022/movies.csv'
+output_path = 's3://data-lake-de-wesley/Trusted/Local/Parquet/Movies/'
+
+df = spark.read.option("delimiter", "|").option('header', 'true').csv(input_path)
 
 df = df.coalesce(1)
 df.write.mode('overwrite').parquet(output_path)
+
 
 
 input_path = 's3://data-lake-de-wesley/Raw/Local/CSV/Series/2022/series.csv'
 output_path = 's3://data-lake-de-wesley/Trusted/Local/Parquet/Series/2022'
 
 
-df = spark.read.option('header', 'true').csv(input_path)
+df = spark.read.option("delimiter", "|").option('header', 'true').csv(input_path)
 
 df = df.coalesce(1)
 df.write.mode('overwrite').parquet(output_path)
