@@ -20,7 +20,7 @@ Agrupar por faixa de notas e verificar a duração média em cada faixa.
 
 Discussão:
 
-Analisar se existe alguma correlação entre as faixas de notas dos filmes e a duração. Além de analisar se os diretores que mais produzem são os que tem as melhores notas.
+Analisar se existe alguma correlação entre as faixas de notas dos filmes e a duração. Além de analisar se os diretores que mais produzem são os que tem as melhores notas. Dessa forma, verificar se essas duas analises tem relação com o lucro dos filmes.
 
 Intuito:
 
