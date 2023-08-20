@@ -7,9 +7,9 @@
 
 **Curso:** Engenharia de Software
 
-**Semestre atual:** 3º 
+**Semestre atual:** 4º 
 
-**Experiências na área de tecnologia:** Acompanhamento do desensolvimento de códigos em Arduino e Python, aplicados a hardwares da área da Performance e Saúde.
+**Experiências na área de tecnologia:** Acompanhamento do desensolvimento de códigos em Arduino e Python, aplicados a hardwares da área da Performance e Saúde. 
 
 **Hobbies:** Corrida, Leitura e Natação.
 
@@ -18,14 +18,19 @@
 ## Desenvolvimento do programa de bolsas ##
 **Resumo**
 
-Até o momento tive uma boa ambientação com os cursos em um contexto geral, completando todos dentro do prazo e sem intercorrências.
+Aprofundar conhecimentos em aws cloud data engineering; aprender sobre core languages: sql, python (etl, pandas, numpy e mais), componentes de Cloud: iam, ec2, vpc, lambda, step function, serviços analíticos: emr, glue, athena, quicksight, processamento de dados com spark, visualização e modelagem de dados; vivenciar ambiente de metodologia ágil. Ao longo do programa o aluno pode obter conhecimento de outras programações e atividades relacionadas com seu curso. 
 
-O curso de Git/GitHub me trouxe informações relevantes sobre a exposição do meu progresso e possíveis portifólios profissionais.
+Todo o programa de estágio foi desenvolvido em um modelo de metodologias ágeis, com as devidas separações em Sprits, Dayles e reviews.Foram inseridas também atividades e cursos para entendimento de sistemas operacionais e sua manipulação. Assim como, a correta utilização de terminais nos possíveis sistemas operacionais, como Linux e Windows. 
 
-Já no curso de GNU/Linux, não tive tanta facilidade, demorando um pouco mais para consolidar o aprendizado, porém, conclui com exito o curso.
+As atividades das sprints iniciais tiveram um cunho introdutório de como utilizar e filtrar bancos de dados. Sendo assim, foi muito utilizado a manipulação de dados em sql e o uso do python foi bem intenso para desenvolver a capacidade de cada um de utilização da linguagem. 
 
-O curso de SQL e Big Data foi fascinante, pois não havia dito contado com o tratamento de dados e análise dos mesmos. Esses dois cursos me mostraram o poder dos dados, de como manipulalos e como extrair muito valor deles. Cursos sensacionais, me fez criar uma grande afinidade pela área.
+Feito esse momento introdutório, fomos expostos a ferramentas de cloud da AWS (Amazon Web Service) e podemos então entender como tudo pode funcionar sem a utilização local. Entendemos nessa etapa como era o funcionamento das ferramentas S3, Glue, Lambda, Athena, EC2, IAM e outras possíveis. Além disso, foi o momento de entendermos como isso se aplicaria a diversos cenários empresariais e seus respectivos custos. 
 
-Nós cursos relacionados a Pyhton, tive mais facilidade, apesar do conteúdo ser extenso e denso.
+Por fim, no último terço do programa, foi abordado um projeto final. O intuito era utilizar todas as ferramentas aprendidas ao longo do programa e criar nosso próprio produto final. Sendo assim, com a utilização de ferramentas como Hadoop, Spark e AWS, pudemos o que foi proposto. Tudo se baseou em algumas etapas: 
 
-Em relação aos cursos de Docker e Estatística, abordaram conteúdos bem práticos. Mostrando de forma clara a aplicação no mercado de algumas ferramentas.
+- Primeiramente tivemos que extrair dados de uma API e alocar esses dados no Bucket S3.
+- Depois nós tivemos que entender a modelagem e como faríamos ela para os nossos dados.
+- A terceira parte se baseou em filtrar aquilo que era de suma importância para nós e colocarmos isso em tabelas já previamente desenhadas na nossa modelagem. Para isso utilizamos o Glue.
+- A quarta e última etapa, nós tínhamos então que criar nosso próprio Dashboard e mostrar nossos insights diante do que tínhamos extraído. 
+
+Todo esse processo foi finalizado com a oportunidade de realização da prova de certificação da AWS Cloud Practitioner.
